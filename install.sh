@@ -22,3 +22,4 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 ./programs/spotify.sh
 ./programs/google-chrome.sh
 ./programs/visual-studio-code.sh
+./programs/slack.sh
