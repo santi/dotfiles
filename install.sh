@@ -6,7 +6,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # install system essentials
-sudo apt install -y vim git
+sudo apt install -y vim git curl
 
 
 # install programming languages and utilities
@@ -18,3 +18,4 @@ sudo ln /usr/bin/pip3 /usr/bin/pip
 # Install programs
 ./programs/spotify.sh
 ./programs/google-chrome.sh
+./programs/visual-studio-code.sh
