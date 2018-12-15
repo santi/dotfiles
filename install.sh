@@ -14,6 +14,10 @@ sudo apt install -y python3 python3-pip python3-dev
 sudo ln /usr/bin/python3 /usr/bin/python
 sudo ln /usr/bin/pip3 /usr/bin/pip
 
+# Node Version Manager
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+
 # Install programs
 ./programs/spotify.sh
 ./programs/google-chrome.sh
