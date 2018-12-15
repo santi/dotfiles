@@ -6,8 +6,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # install system essentials
-sudo apt install -y vim git curl
-
+sudo apt install -y vim git curl openconnect
 
 # install programming languages and utilities
 # Python3
