@@ -24,6 +24,9 @@ sudo ln /usr/bin/python3 /usr/bin/python
 sudo ln /usr/bin/pip3 /usr/bin/pip
 sudo pip install virtualenv
 
+## Java
+sudo apt install default-jdk
+
 ## Node Version Manager
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
