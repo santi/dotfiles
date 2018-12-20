@@ -19,7 +19,7 @@ sudo apt install -y vim git curl openconnect
 
 # Install programming languages and utilities
 ## Python3
-sudo apt install -y python3 python3-pip python3-dev
+sudo apt install -y python3 python3-pip python3-dev python3-tk
 sudo ln /usr/bin/python3 /usr/bin/python
 sudo ln /usr/bin/pip3 /usr/bin/pip
 sudo pip install virtualenv
