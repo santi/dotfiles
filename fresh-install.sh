@@ -25,7 +25,7 @@ sudo ln /usr/bin/pip3 /usr/bin/pip
 sudo pip install virtualenv
 
 ## Java
-sudo apt install default-jdk
+sudo apt install -y default-jdk
 
 ## Node Version Manager
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -36,7 +36,7 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 ./programs/google-chrome.sh
 ./programs/visual-studio-code.sh
 ./programs/slack.sh
-
+./programs/gnome-desktop.sh
 
 # Symlink dotfiles
 ./update.sh
