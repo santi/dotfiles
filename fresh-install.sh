@@ -37,6 +37,7 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 ./programs/visual-studio-code.sh
 ./programs/slack.sh
 ./programs/gnome-desktop.sh
+./programs/docker.sh
 
 # Symlink dotfiles
 ./update.sh
