@@ -41,3 +41,6 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 # Symlink dotfiles
 ./update.sh
 
+
+# nå har jeg endret denne filen.
+
