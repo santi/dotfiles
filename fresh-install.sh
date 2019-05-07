@@ -15,7 +15,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install system essentials
-sudo apt install -y vim git curl openconnect
+sudo apt install -y vim git curl openconnect speedtest-cli
 
 # Install programming languages and utilities
 ## Python3
