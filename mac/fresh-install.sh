@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ -e common/rc/ ]] || { echo >&2 "Please cd into the project directory before running this script."; exit 1; }
+[[ -e common/rc/ ]] || { echo >&2 "Please cd into the project root directory before running this script."; exit 1; }
 
 echo "This script will perform a clean system install."
 read -p 'Do you want to proceed? (y/N) ' resp
@@ -67,4 +67,4 @@ brew cask install docker
 brew install kubernetes-cli
 
 # Symlink dotfiles
-./update.sh
+./common/update.sh

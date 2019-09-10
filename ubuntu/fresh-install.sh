@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ -e rc/ ]] || { echo >&2 "Please cd into the project directory before running this script."; exit 1; }
+[[ -e common/rc/ ]] || { echo >&2 "Please cd into the project root directory before running this script."; exit 1; }
 
 echo "This script will perform a clean system install."
 read -p 'Do you want to proceed? (y/N) ' resp
@@ -32,16 +32,12 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 
 
 # Install programs
-./programs/spotify.sh
-./programs/google-chrome.sh
-./programs/visual-studio-code.sh
-./programs/slack.sh
-./programs/gnome-desktop.sh
-./programs/docker.sh
+./ubuntu/programs/spotify.sh
+./ubuntu/programs/google-chrome.sh
+./ubuntu/programs/visual-studio-code.sh
+./ubuntu/programs/slack.sh
+./ubuntu/programs/gnome-desktop.sh
+./ubuntu/programs/docker.sh
 
 # Symlink dotfiles
-./update.sh
-
-
-# nå har jeg endret denne filen.
-
+./common/update.sh
