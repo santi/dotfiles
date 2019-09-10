@@ -10,6 +10,9 @@ if [ "$resp" != 'y' -a "$resp" != 'Y' ] ; then
 	exit 1
 fi
 
+echo "This installation requires sudo. Please enter your password:"
+sudo echo "Starting installation..."
+
 
 # Install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
