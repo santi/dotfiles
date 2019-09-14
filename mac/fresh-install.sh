@@ -31,12 +31,9 @@ brew cask install visual-studio-code
 
 # Install python3
 brew install python
-sudo ln /usr/local/bin/python3 /usr/local/bin/python
-sudo ln /usr/local/bin/pip3 /usr/local/bin/pip
+sudo ln -sf /usr/local/bin/python3 /usr/local/bin/python
+sudo ln -sf /usr/local/bin/pip3 /usr/local/bin/pip
 pip install virtualenv
-
-# Install java
-brew cask install java
 
 # Install slack
 brew cask install slack
@@ -67,4 +64,4 @@ brew cask install docker
 brew install kubernetes-cli
 
 # Symlink dotfiles
-./common/update.sh
+. mac/update.sh
