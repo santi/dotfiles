@@ -5,7 +5,7 @@ Repo for my dotfiles
 From the root directory of this project, run:
 
 ```bash
-./[mac|ubuntu]/fresh-install.sh
+./[mac|ubuntu]/install.sh
 ```
 
 ## How to update symlinks
