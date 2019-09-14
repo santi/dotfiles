@@ -92,10 +92,6 @@ fi
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -119,6 +115,3 @@ export NVM_DIR="$HOME/.nvm"
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export GRADLE_HOME=$(brew info gradle | grep /usr/local/Cellar/gradle | awk '{print $1}')
-export GRADLE_USER_HOME=$(brew info gradle | grep /usr/local/Cellar/gradle | awk '{print $1}')
-export USER_HOME=$HOME
