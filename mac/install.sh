@@ -20,6 +20,9 @@ sudo echo "Starting installation..."
 # Install system essentials
 brew install openconnect speedtest-cli
 
+# Install Spectacle window manager
+brew cask install spectacle
+
 # Install iterm2
 brew cask install iterm2
 
