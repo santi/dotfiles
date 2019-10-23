@@ -38,6 +38,10 @@ sudo ln -sf /usr/local/bin/python3 /usr/local/bin/python
 sudo ln -sf /usr/local/bin/pip3 /usr/local/bin/pip
 pip install virtualenv
 
+# Install python2
+brew install python2
+sudo ln -sf /usr/bin/python2.7 /usr/local/bin/python2
+
 # Install slack
 brew cask install slack
 
@@ -65,6 +69,9 @@ brew cask install docker
 
 # Install kubernetes CLI
 brew install kubernetes-cli
+
+# Install Karabiner for overriding keys
+brew cask install karabiner-elements
 
 # Symlink dotfiles
 . mac/update.sh

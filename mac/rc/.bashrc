@@ -1,8 +1,3 @@
-# Gradle
-export GRADLE_HOME=$(brew info gradle | grep /usr/local/Cellar/gradle | awk '{print $1}')
-export GRADLE_USER_HOME=$(brew info gradle | grep /usr/local/Cellar/gradle | awk '{print $1}')
-export USER_HOME=$HOME
-
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
