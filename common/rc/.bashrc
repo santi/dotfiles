@@ -115,3 +115,6 @@ export NVM_DIR="$HOME/.nvm"
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Add libpq to PATH to use psql without installing the whole Postgres library
+export PATH="/usr/local/opt/libpq/bin:$PATH"

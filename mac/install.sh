@@ -73,5 +73,8 @@ brew install kubernetes-cli
 # Install Karabiner for overriding keys
 brew cask install karabiner-elements
 
+# Install libpq
+brew install libpq
+
 # Symlink dotfiles
 . mac/update.sh
