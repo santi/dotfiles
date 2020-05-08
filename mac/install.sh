@@ -67,14 +67,18 @@ npm install -g yarn
 # Install docker
 brew cask install docker
 
-# Install kubernetes CLI
-brew install kubernetes-cli
-
 # Install Karabiner for overriding keys
 brew cask install karabiner-elements
 
 # Install libpq
 brew install libpq
+
+# Install asdf for handling multiple versions of libraries
+brew install asdf
+
+# Install latest kubectl
+asdf plugin-add kubectl
+asdf install kubectl 1.18.2
 
 # Symlink dotfiles
 . mac/update.sh
