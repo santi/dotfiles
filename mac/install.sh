@@ -15,27 +15,28 @@ sudo echo "Starting installation..."
 
 
 # Install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install system essentials
 brew install openconnect speedtest-cli
 
 # Install Spectacle window manager
-brew cask install spectacle
+brew install --cask spectacle
 
 # Install iterm2
-brew cask install iterm2
+brew install --cask iterm2
 
 # Install Google Chrome
-brew cask install google-chrome
+brew install --cask google-chrome
 
 # Install Visual Studio Code
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 # Install python3
 brew install python
 sudo ln -sf /usr/local/bin/python3 /usr/local/bin/python
 sudo ln -sf /usr/local/bin/pip3 /usr/local/bin/pip
+python -m pip install --upgrade pip
 pip install virtualenv
 
 # Install python2
@@ -43,16 +44,16 @@ brew install python2
 sudo ln -sf /usr/bin/python2.7 /usr/local/bin/python2
 
 # Install slack
-brew cask install slack
+brew install --cask slack
 
 # Install spotify
-brew cask install spotify
+brew install --cask spotify
 
 # Install Intellij
-brew cask install intellij-idea
+brew install --cask intellij-idea
 
 # Install Android Studios
-brew cask install android-studio
+brew install --cask android-studio
 
 # Install Gradle
 brew install gradle
@@ -65,10 +66,10 @@ nvm install stable
 npm install -g yarn
 
 # Install docker
-brew cask install docker
+brew install --cask docker
 
 # Install Karabiner for overriding keys
-brew cask install karabiner-elements
+brew install --cask karabiner-elements
 
 # Install libpq
 brew install libpq
