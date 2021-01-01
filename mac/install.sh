@@ -76,6 +76,9 @@ brew install libpq
 # Install asdf for handling multiple versions of libraries
 brew install asdf
 
+# Install bash completion
+brew install bash-completion
+
 # Install latest kubectl
 asdf plugin-add kubectl
 asdf install kubectl 1.18.2
