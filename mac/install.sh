@@ -77,6 +77,10 @@ brew install libpq
 # Install asdf for handling multiple versions of libraries
 brew install asdf
 
+# Install sdkman to handle multiple Java/Groovy/Scala versions
+curl -s http://get.sdkman.io | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # Install bash completion
 brew install bash-completion
 
