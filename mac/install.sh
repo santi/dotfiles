@@ -81,6 +81,10 @@ brew install asdf
 curl -s http://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+sdk install java 15.0.1.j9-adpt
+yes n | sdk install java 11.0.9.j9-adpt
+yes n | sdk install java 8.0.275.j9-adpt
+
 # Install bash completion
 brew install bash-completion
 
