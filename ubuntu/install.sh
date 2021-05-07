@@ -10,9 +10,12 @@ if [ "$resp" != 'y' -a "$resp" != 'Y' ] ; then
 	exit 1
 fi
 
+echo "This installation requires sudo. Please enter your password:"
+sudo echo "Starting installation..."
 
 sudo apt update
 sudo apt upgrade -y
+sudo apt autoremove -y
 
 # Install system essentials
 sudo apt install -y vim git curl openconnect speedtest-cli
@@ -25,18 +28,21 @@ sudo ln /usr/bin/pip3 /usr/bin/pip
 sudo pip install virtualenv
 
 ## Java
-sudo apt install -y default-jdk
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
 
 ## Node Version Manager
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
+source ~/.nvm/nvm.sh
+nvm install stable
+nvm install-latest-npm
 
 # Install programs
 ./ubuntu/programs/spotify.sh
 ./ubuntu/programs/google-chrome.sh
 ./ubuntu/programs/visual-studio-code.sh
 ./ubuntu/programs/slack.sh
-./ubuntu/programs/gnome-desktop.sh
 ./ubuntu/programs/docker.sh
 
 # Symlink dotfiles
