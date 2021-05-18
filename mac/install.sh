@@ -49,12 +49,6 @@ brew install --cask slack
 # Install spotify
 brew install --cask spotify
 
-# Install Intellij
-brew install --cask intellij-idea
-
-# Install Android Studios
-brew install --cask android-studio
-
 # Install Gradle
 brew install gradle
 
