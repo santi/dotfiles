@@ -40,10 +40,6 @@ sudo ln -sf /usr/local/bin/pip3 /usr/local/bin/pip
 python -m pip install --upgrade pip
 pip install virtualenv
 
-# Install python2
-brew install python2
-sudo ln -sf /usr/bin/python2.7 /usr/local/bin/python2
-
 # Install slack
 brew install --cask slack
 
