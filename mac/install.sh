@@ -18,6 +18,10 @@ sudo echo "Starting installation..."
 yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 export PATH=/opt/homebrew/bin:$PATH
 
+#Install git through brew instead of relying on system install
+brew install git
+brew link --overwrite git
+
 # Install system essentials
 brew install openconnect speedtest-cli
 
