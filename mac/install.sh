@@ -21,7 +21,7 @@ yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebr
 brew install openconnect speedtest-cli
 
 # Install Spectacle window manager
-brew install --cask spectacle
+brew install --cask rectangle
 
 # Install iterm2
 brew install --cask iterm2
