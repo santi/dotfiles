@@ -16,6 +16,7 @@ sudo echo "Starting installation..."
 
 # Install brew
 yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+export PATH=/opt/homebrew/bin:$PATH
 
 # Install system essentials
 brew install openconnect speedtest-cli
