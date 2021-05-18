@@ -53,7 +53,7 @@ brew install --cask spotify
 brew install gradle
 
 # Install nvm, node and yarn
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install stable
 
@@ -75,9 +75,8 @@ brew install asdf
 curl -s http://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-sdk install java 15.0.1.j9-adpt
-yes n | sdk install java 11.0.9.j9-adpt
-yes n | sdk install java 8.0.275.j9-adpt
+# Install latest stable java
+sdk install java
 
 # Install bash completion
 brew install bash-completion
