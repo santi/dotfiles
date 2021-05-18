@@ -1,6 +1,9 @@
 # Homebrew
 export PATH=/opt/homebrew/bin:$PATH
 
+# Silence warning about zsh shell on startup
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
