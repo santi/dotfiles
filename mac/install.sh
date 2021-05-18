@@ -82,5 +82,8 @@ brew install bash-completion
 asdf plugin-add kubectl
 asdf install kubectl 1.18.2
 
+# Configure Git
+git config --global pull.ff only
+
 # Symlink dotfiles
 . mac/update.sh
