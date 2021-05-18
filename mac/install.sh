@@ -35,8 +35,8 @@ brew install --cask visual-studio-code
 
 # Install python3
 brew install python
-sudo ln -sf /usr/local/bin/python3 /usr/local/bin/python
-sudo ln -sf /usr/local/bin/pip3 /usr/local/bin/pip
+sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
+sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
 python -m pip install --upgrade pip
 pip install virtualenv
 
