@@ -65,7 +65,7 @@ brew install --cask docker
 # Install Karabiner for overriding keys
 brew install --cask karabiner-elements
 
-# Install libpq
+# Install libpq, interface library for PostgreSQL
 brew install libpq
 
 # Install asdf for handling multiple versions of libraries
