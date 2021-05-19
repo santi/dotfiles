@@ -28,6 +28,9 @@ brew install openconnect speedtest-cli
 # Install Spectacle window manager
 brew install --cask rectangle
 
+# Install Scroll Reverser
+brew install --cask scroll-reverser
+
 # Install iterm2
 brew install --cask iterm2
 
