@@ -40,6 +40,9 @@ brew install --cask google-chrome
 # Install Visual Studio Code
 brew install --cask visual-studio-code
 
+# Install Postman
+brew install --cask postman
+
 # Install python3
 brew install python
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
