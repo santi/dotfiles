@@ -69,6 +69,9 @@ npm install -g yarn
 # Install docker
 brew install --cask docker
 
+# Install DBeaver
+brew install --cask dbeaver-community
+
 # Install Karabiner for overriding keys
 brew install --cask karabiner-elements
 
@@ -94,6 +97,9 @@ asdf install kubectl 1.18.2
 
 # Configure Git
 git config --global pull.ff only
+
+# Add BFG tool to cleanup Git history
+brew install bfg
 
 # Symlink dotfiles
 . mac/update.sh
