@@ -9,10 +9,15 @@ alias dac="deactivate"
 
 # Git aliases
 alias gco="git checkout"
+__git_complete gco _git_checkout
 alias gci="git commit"
+__git_complete gci _git_commit
 alias gps="git push"
+__git_complete gps _git_push
 alias gpl="git pull"
+__git_complete gpl _git_pull
 alias ga="git add"
+__git_complete ga _git_add
 alias gs="git status"
 alias glog="git log --graph --all --decorate --oneline"
 
