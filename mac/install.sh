@@ -91,6 +91,9 @@ sdk install java
 # Install bash completion
 brew install bash-completion
 
+# Install Gcloud
+brew install google-cloud-sdk
+
 # Install latest kubectl
 asdf plugin-add kubectl
 asdf install kubectl 1.18.2

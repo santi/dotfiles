@@ -25,3 +25,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Add libraries managed by asdf to PATH
 . $(brew --prefix asdf)/asdf.sh
 export PATH=$PATH:$HOME/.asdf/shims
+
+# The next line updates PATH for the Google Cloud SDK.
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
