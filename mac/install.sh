@@ -22,6 +22,9 @@ export PATH=/opt/homebrew/bin:$PATH
 brew install git
 brew link --overwrite git
 
+# Configure Git
+git config --global pull.ff only
+
 # Install system essentials
 brew install openconnect speedtest-cli
 
