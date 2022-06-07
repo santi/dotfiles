@@ -78,9 +78,6 @@ brew install --cask karabiner-elements
 # Install libpq, interface library for PostgreSQL
 brew install libpq
 
-# Install asdf for handling multiple versions of libraries
-brew install asdf
-
 # Install sdkman to handle multiple Java/Groovy/Scala versions
 curl -s http://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -93,13 +90,6 @@ brew install bash-completion
 
 # Install Gcloud
 brew install google-cloud-sdk
-
-# Install latest kubectl
-asdf plugin-add kubectl
-asdf install kubectl 1.18.2
-
-# Configure Git
-git config --global pull.ff only
 
 # Add BFG tool to cleanup Git history
 brew install bfg
