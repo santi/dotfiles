@@ -28,7 +28,7 @@ git config --global pull.ff only
 # Install system essentials
 brew install openconnect speedtest-cli
 
-# Install Spectacle window manager
+# Install Rectangle window manager
 brew install --cask rectangle
 
 # Install Scroll Reverser
