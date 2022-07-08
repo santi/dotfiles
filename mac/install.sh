@@ -18,84 +18,54 @@ sudo echo "Starting installation..."
 yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 export PATH=/opt/homebrew/bin:$PATH
 
-#Install git through brew instead of relying on system install
+# Install git through brew instead of relying on system install
 brew install git
 brew link --overwrite git
 
 # Configure Git
 git config --global pull.ff only
 
-# Install system essentials
-brew install openconnect speedtest-cli
+# System utilities
+brew install openconnect
+brew install speedtest-cli
+brew install bash-completion
+brew install libpq # PostgreSQL interface
+brew install bfg # Tool to cleanup Git history
 
-# Install Rectangle window manager
-brew install --cask rectangle
-
-# Install Scroll Reverser
-brew install --cask scroll-reverser
-
-# Install iterm2
-brew install --cask iterm2
-
-# Install Google Chrome
+# Applications
+brew install --cask dbeaver-community # Database management tool
+brew install --cask docker
 brew install --cask google-chrome
-
-# Install Visual Studio Code
+brew install --cask iterm2
+brew install --cask karabiner-elements # Karabiner for overriding keys
+brew install --cask postman
+brew install --cask rectangle # Rectangle window manager
+brew install --cask scroll-reverser
+brew install --cask slack
+brew install --cask spotify
+brew install --cask stats # Stats system monitor
 brew install --cask visual-studio-code
 
-# Install Postman
-brew install --cask postman
-
-# Install python3
+# Programming languages
+## Python3
 brew install python
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
 python -m pip install --upgrade pip
-pip install virtualenv
 
-# Install slack
-brew install --cask slack
-
-# Install spotify
-brew install --cask spotify
-
-# Install Gradle
-brew install gradle
-
-# Install nvm, node and yarn
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+## NodeJS
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install stable
 
 npm install -g yarn
 
-# Install docker
-brew install --cask docker
-
-# Install DBeaver
-brew install --cask dbeaver-community
-
-# Install Karabiner for overriding keys
-brew install --cask karabiner-elements
-
-# Install libpq, interface library for PostgreSQL
-brew install libpq
-
-# Install sdkman to handle multiple Java/Groovy/Scala versions
+## Java
 curl -s http://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Install latest stable java
 sdk install java
 
-# Install bash completion
-brew install bash-completion
-
-# Install Gcloud
-brew install google-cloud-sdk
-
-# Add BFG tool to cleanup Git history
-brew install bfg
+brew install gradle
 
 # Symlink dotfiles
 . mac/update.sh
