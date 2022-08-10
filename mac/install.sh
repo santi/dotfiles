@@ -27,12 +27,8 @@ git config --global pull.ff only
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
 
-# System utilities
-brew install openconnect
-brew install speedtest-cli
-brew install bash-completion
-brew install libpq # PostgreSQL interface
-brew install bfg # Tool to cleanup Git history
+# Install system essentials
+brew install openconnect speedtest-cli bash-completion bfg
 
 # Applications
 brew install --cask dbeaver-community # Database management tool
@@ -49,20 +45,26 @@ brew install --cask stats # Stats system monitor
 brew install --cask visual-studio-code
 
 # Programming languages
-## Python3
+# Install python3
 brew install python
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
 python -m pip install --upgrade pip
 
-## NodeJS
+# Install poetry, Python package manager
+brew install poetry
+
+# Install nvm, node and yarn
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install stable
 
 npm install -g yarn
 
-## Java
+# Install libpq, interface library for PostgreSQL
+brew install libpq
+
+# Install sdkman to handle multiple Java/Groovy/Scala versions
 curl -s http://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java
