@@ -24,6 +24,8 @@ brew link --overwrite git
 
 # Configure Git
 git config --global pull.ff only
+git config --global init.defaultBranch main
+git config --global push.autoSetupRemote true
 
 # System utilities
 brew install openconnect
