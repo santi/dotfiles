@@ -109,17 +109,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Load Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Load SDKMan
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-# Add libpq to PATH to use psql without installing the whole Postgres library
-export PATH="/usr/local/opt/libpq/bin:$PATH"
