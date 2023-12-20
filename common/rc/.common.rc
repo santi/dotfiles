@@ -1,0 +1,8 @@
+# Alias definitions.
+if [ -f ~/.common.aliases ]; then
+    . ~/.common.aliases
+fi
+
+# Set vim as default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
