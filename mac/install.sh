@@ -64,7 +64,7 @@ poetry config virtualenvs.in-project true
 
 # Install nvm, node and yarn
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.nvm/nvm.sh
+source "$HOME/.nvm/nvm.sh"
 nvm install stable
 
 npm install -g yarn

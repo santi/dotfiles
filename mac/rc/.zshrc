@@ -14,7 +14,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Add Poetry to path
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 # END PATH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -52,4 +52,4 @@ setopt GLOB_STAR_SHORT
 # END GLOB
 
 # Source common configuration
-source ~/.common.rc
+source "$HOME/.common.rc"
