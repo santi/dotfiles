@@ -22,7 +22,7 @@ export ZSH_CUSTOM="$ZSH/custom"
 ZSH_THEME="robbyrussell"
 
 # START PLUGINS / COMPLETIONS
-plugins=(git nvm)
+plugins=(git nvm poetry)
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
 FPATH="$HOMEBREW_PREFIX/share/zsh-completions:${FPATH}"
 
