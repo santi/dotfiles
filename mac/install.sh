@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
+set -e -o pipefail
+
 [[ -e common/rc/ ]] || { echo >&2 "Please cd into the project root directory before running this script."; exit 1; }
 
 echo "This script will perform a clean system install."
-read -p 'Do you want to proceed? (y/N) ' resp
+read "?Do you want to proceed? (y/N) " resp
 
 if [ "$resp" != 'y' -a "$resp" != 'Y' ] ; then
 	echo "Installation aborted."
@@ -14,6 +16,7 @@ echo "This installation requires sudo. Please enter your password:"
 sudo echo "Starting installation..."
 
 # Install Oh-My-Zsh
+RUNZSH="no"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ## Make sure the ZSH variables below are the same as in rc/.zshrc
 ZSH="$HOME/.oh-my-zsh"
@@ -57,6 +60,7 @@ rm -f ~/.zcompdump; compinit # Recompile completions
 # Programming languages
 # Install python3
 brew install python@3.12
+brew install python@3.11
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
 python -m pip install --upgrade pip
