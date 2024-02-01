@@ -16,11 +16,13 @@ echo "This installation requires sudo. Please enter your password:"
 sudo echo "Starting installation..."
 
 # Install Oh-My-Zsh
-RUNZSH="no"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-## Make sure the ZSH variables below are the same as in rc/.zshrc
-ZSH="$HOME/.oh-my-zsh"
-ZSH_CUSTOM="$ZSH/custom"
+if [ ! $ZSH ] ; then
+	RUNZSH="no"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	## Make sure the ZSH variables below are the same as in rc/.zshrc
+	ZSH="$HOME/.oh-my-zsh"
+	ZSH_CUSTOM="$ZSH/custom"
+fi
 
 # Install brew. Note: Install requires bash, so cannot be switched to zsh
 yes "" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -55,6 +57,7 @@ brew install --cask visual-studio-code
 # ZSH completions
 brew install zsh-completions
 chmod -R go-w "$(brew --prefix)/share" # Fix permissions for completions
+autoload -Uz compinit
 rm -f ~/.zcompdump; compinit # Recompile completions
 
 # Programming languages
