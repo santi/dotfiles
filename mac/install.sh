@@ -97,5 +97,10 @@ sdk install gradle
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
 
+# Hide Dock
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 1000
+killall Dock # Restart Dock to activate changes
+
 # Symlink dotfiles
 source mac/update.sh
