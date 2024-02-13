@@ -93,5 +93,9 @@ yes | sdk install java
 
 sdk install gradle
 
+# Change the whitespace in top taskbar to enable more icons
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
+
 # Symlink dotfiles
 source mac/update.sh
