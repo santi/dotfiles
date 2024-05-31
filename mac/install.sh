@@ -43,16 +43,15 @@ brew install openconnect speedtest-cli bfg
 
 # Applications
 brew install --cask dbeaver-community # Database management tool
-brew install --cask docker
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask karabiner-elements # Karabiner for overriding keys
 brew install --cask postman
-brew install --cask rectangle # Rectangle window manager
+brew install --cask rectangle # Window manager
 brew install --cask scroll-reverser
 brew install --cask slack
 brew install --cask spotify
-brew install --cask stats # Stats system monitor
+brew install --cask stats # System metrics in taskbar
 brew install --cask visual-studio-code
 
 # ZSH completions
@@ -88,7 +87,7 @@ brew install libpq
 brew install openssl
 
 # Install sdkman to handle multiple Java/Groovy/Scala versions
-curl -s http://get.sdkman.io | bash
+curl -s https://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 yes | sdk install java
 
