@@ -19,10 +19,11 @@ sudo echo "Starting installation..."
 if [ ! $ZSH ] ; then
 	RUNZSH="no"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	## Make sure the ZSH variables below are the same as in rc/.zshrc
-	ZSH="$HOME/.oh-my-zsh"
-	ZSH_CUSTOM="$ZSH/custom"
 fi
+
+## Make sure the ZSH variables below are the same as in rc/.zshrc
+ZSH="$HOME/.oh-my-zsh"
+ZSH_CUSTOM="$ZSH/custom"
 
 # Install brew. Note: Install requires bash, so cannot be switched to zsh
 yes "" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -72,7 +73,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 export PATH="$HOME/.local/bin:$PATH"
 poetry config virtualenvs.in-project true
 
-mkdir $ZSH_CUSTOM/plugins/poetry
+mkdir -p $ZSH_CUSTOM/plugins/poetry
 poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 
 # Install nvm, node and yarn
