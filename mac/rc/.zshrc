@@ -1,6 +1,6 @@
 # START PATH
 # Homebrew
-export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 export HOMEBREW_PREFIX=/opt/homebrew
 
 # Add SDKMAN binaries to path
