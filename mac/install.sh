@@ -98,11 +98,16 @@ sdk install gradle && echo ""
 # Change the whitespace in top taskbar to enable more icons
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
-
+# Disable bottom right hot corner for creating new notes
+defaults write com.apple.dock wvous-br-corner -int 1
+# Disable click--on-desktop-to-show-desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 # Hide Dock
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 1000
-killall Dock # Restart Dock to activate changes
+
+killall Dock WindowManager
+
 
 # Symlink dotfiles
 source mac/update.sh
