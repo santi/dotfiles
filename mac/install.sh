@@ -18,7 +18,7 @@ sudo echo "Starting installation..."
 # Install Oh-My-Zsh
 if [ ! $ZSH ] ; then
 	RUNZSH="no"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 ## Make sure the ZSH variables below are the same as in rc/.zshrc
@@ -26,8 +26,8 @@ ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM="$ZSH/custom"
 
 # Install brew. Note: Install requires bash, so cannot be switched to zsh
-yes "" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install git through brew instead of relying on system install
 brew install git
