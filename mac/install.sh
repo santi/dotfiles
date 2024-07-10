@@ -87,10 +87,13 @@ brew install openssl
 
 # Install sdkman to handle multiple Java/Groovy/Scala versions
 curl -s https://get.sdkman.io | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-yes | sdk install java
+source $HOME/.sdkman/bin/sdkman-init.sh
 
-sdk install gradle
+# Install Java. For some unknown reason, SDKMAN fails silently without another command after the &&
+sdk install java && echo ""
+
+# Install Gradle. For some unknown reason, SDKMAN fails silently without another command after the &&
+sdk install gradle && echo ""
 
 # Change the whitespace in top taskbar to enable more icons
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
