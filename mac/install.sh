@@ -66,7 +66,6 @@ brew install python@3.12
 brew install python@3.11
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
-python -m pip install --upgrade pip
 
 curl -sSL https://install.python-poetry.org | python3 -
 export PATH="$HOME/.local/bin:$PATH"
