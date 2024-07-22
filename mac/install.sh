@@ -39,7 +39,7 @@ git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
 
 # Install system essentials
-brew install openconnect speedtest-cli bfg
+brew install openconnect speedtest-cli bfg jq
 
 # Applications
 brew install --cask dbeaver-community # Database management tool
@@ -53,6 +53,17 @@ brew install --cask slack
 brew install --cask spotify
 brew install --cask stats # System metrics in taskbar
 brew install --cask visual-studio-code
+brew install docker
+brew install docker-compose
+brew install colima
+
+# Enable Docker Compose as Docker CLI plugin
+jq '.cliPluginsExtraDirs=["/opt/homebrew/lib/docker/cli-plugins"]' ~/.docker/config.json > ~/.docker/config.json.tmp && mv ~/.docker/config.json.tmp ~/.docker/config.json
+
+# Colima setup
+brew services start colima
+colima stop
+colima start --cpu 2 --memory 4 --network-address
 
 # ZSH completions
 brew install zsh-completions
