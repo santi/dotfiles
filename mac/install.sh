@@ -45,7 +45,6 @@ brew install openconnect speedtest-cli bfg jq
 brew install --cask dbeaver-community # Database management tool
 brew install --cask google-chrome
 brew install --cask iterm2
-brew install --cask karabiner-elements # Karabiner for overriding keys
 brew install --cask postman
 brew install --cask rectangle # Window manager
 brew install --cask scroll-reverser
@@ -105,6 +104,9 @@ sdk install java && echo ""
 
 # Install Gradle. For some unknown reason, SDKMAN fails silently without another command after the &&
 sdk install gradle && echo ""
+
+# Map Caps Lock to Escape. Keycodes can be found here: https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES
+hidutil property --set "{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\": 0x700000039, \"HIDKeyboardModifierMappingDst\": 0x700000029}]}"
 
 # Change the whitespace in top taskbar to enable more icons
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
