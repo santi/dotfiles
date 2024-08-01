@@ -108,6 +108,9 @@ sdk install gradle && echo ""
 # Map Caps Lock to Escape. Keycodes can be found here: https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES
 hidutil property --set "{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\": 0x700000039, \"HIDKeyboardModifierMappingDst\": 0x700000029}]}"
 
+# Enable Touch ID for sudo authentication
+sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+
 # Change the whitespace in top taskbar to enable more icons
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
