@@ -60,7 +60,7 @@ brew install colima
 jq '.cliPluginsExtraDirs=["/opt/homebrew/lib/docker/cli-plugins"]' ~/.docker/config.json > ~/.docker/config.json.tmp && mv ~/.docker/config.json.tmp ~/.docker/config.json
 
 # Colima setup
-brew services start colima
+brew services restart colima
 colima stop
 colima start --cpu 2 --memory 4 --network-address
 
