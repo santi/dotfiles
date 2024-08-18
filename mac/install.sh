@@ -64,6 +64,14 @@ brew services start colima
 colima stop
 colima start --cpu 2 --memory 4 --network-address
 
+# Install VS Code extensions
+code --install-extension ms-python.python
+code --install-extension ms-python.black-formatter
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension eamodio.gitlens
+code --install-extension esbenp.prettier-vscode
+code --install-extension tombonnike.vscode-status-bar-format-toggle
+
 # ZSH completions
 brew install zsh-completions
 chmod -R go-w "$(brew --prefix)/share" # Fix permissions for completions
