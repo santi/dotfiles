@@ -62,7 +62,7 @@ jq '.cliPluginsExtraDirs=["/opt/homebrew/lib/docker/cli-plugins"]' ~/.docker/con
 # Colima setup
 brew services restart colima
 colima stop
-colima start --cpu 2 --memory 4 --network-address
+colima start --vm-type vz --cpu 2 --memory 4 --network-address
 
 # Install VS Code extensions
 code --install-extension ms-python.python
