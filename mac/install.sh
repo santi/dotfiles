@@ -37,6 +37,7 @@ brew link --overwrite git
 git config --global pull.ff only
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
+git config --global diff.noprefix true
 
 # Install system essentials
 brew install openconnect speedtest-cli bfg jq
