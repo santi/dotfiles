@@ -26,7 +26,7 @@ plugins=(git nvm poetry)
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
 FPATH="$HOMEBREW_PREFIX/share/zsh-completions:${FPATH}"
 
-zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' lazy no
 # END PLUGINS / COMPLETIONS
 
 source $ZSH/oh-my-zsh.sh
