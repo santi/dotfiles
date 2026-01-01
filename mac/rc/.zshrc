@@ -12,9 +12,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Add libpq to path
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-# Add Poetry to path
-export PATH="$HOME/.local/bin:$PATH"
 # END PATH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -22,7 +19,7 @@ export ZSH_CUSTOM="$ZSH/custom"
 ZSH_THEME="robbyrussell"
 
 # START PLUGINS / COMPLETIONS
-plugins=(git nvm poetry)
+plugins=(git nvm)
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
 FPATH="$HOMEBREW_PREFIX/share/zsh-completions:${FPATH}"
 
