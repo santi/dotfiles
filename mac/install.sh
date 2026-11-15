@@ -47,6 +47,7 @@ brew install --cask dbeaver-community # Database management tool
 brew install --cask google-chrome
 brew install --cask zen
 brew install --cask ghostty
+brew install --cask 1password
 brew install --cask rectangle # Window manager
 brew install --cask slack
 brew install --cask spotify
@@ -56,8 +57,15 @@ brew install docker
 brew install podman
 
 # Podman setup
-podman machine init
-podman machine start
+MACHINE=podman-machine-default
+
+if ! podman machine inspect "$MACHINE" &>/dev/null; then
+  podman machine init "$MACHINE"
+fi
+
+if [[ "$(podman machine inspect --format '{{.State}}' "$MACHINE")" != "running" ]]; then
+  podman machine start "$MACHINE"
+fi
 
 # Install VS Code extensions
 code --install-extension ms-python.python
@@ -90,6 +98,7 @@ brew install libpq
 brew install openssl
 
 # Install sdkman to handle multiple Java/Groovy/Scala versions
+brew install bash
 curl -s https://get.sdkman.io | bash
 source $HOME/.sdkman/bin/sdkman-init.sh
 
