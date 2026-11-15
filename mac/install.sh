@@ -40,30 +40,24 @@ git config --global push.autoSetupRemote true
 git config --global diff.noprefix true
 
 # Install system essentials
-brew install openconnect speedtest-cli bfg jq
+brew install openconnect speedtest-cli jq
 
 # Applications
 brew install --cask dbeaver-community # Database management tool
 brew install --cask google-chrome
-brew install --cask iterm2
-brew install --cask postman
+brew install --cask zen
+brew install --cask ghostty
 brew install --cask rectangle # Window manager
-brew install --cask scroll-reverser
 brew install --cask slack
 brew install --cask spotify
 brew install --cask stats # System metrics in taskbar
 brew install --cask visual-studio-code
 brew install docker
-brew install docker-compose
-brew install colima
+brew install podman
 
-# Enable Docker Compose as Docker CLI plugin
-jq '.cliPluginsExtraDirs=["/opt/homebrew/lib/docker/cli-plugins"]' ~/.docker/config.json > ~/.docker/config.json.tmp && mv ~/.docker/config.json.tmp ~/.docker/config.json
-
-# Colima setup
-brew services restart colima
-colima stop
-colima start --vm-type vz --cpu 2 --memory 8 --network-address
+# Podman setup
+podman machine init
+podman machine start
 
 # Install VS Code extensions
 code --install-extension ms-python.python
@@ -81,17 +75,15 @@ rm -f ~/.zcompdump; compinit # Recompile completions
 
 # Programming languages
 # Install python3
-brew install python@3.12
-brew install python@3.11
+brew install python@3.15
+brew install python@3.14
 sudo ln -sf /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 sudo ln -sf /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
 
-# Install nvm, node and yarn
+# Install nvm, node
 PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 source "$HOME/.nvm/nvm.sh"
 nvm install stable
-
-npm install -g yarn
 
 # Install libpq, interface library for PostgreSQL
 brew install libpq

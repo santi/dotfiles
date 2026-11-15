@@ -7,9 +7,6 @@ export HOMEBREW_PREFIX=/opt/homebrew
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Add global yarn node_modules to path
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 # Add libpq to path
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # END PATH
