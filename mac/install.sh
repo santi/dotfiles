@@ -50,6 +50,7 @@ brew install --cask ghostty
 brew install --cask 1password
 brew install --cask rectangle # Window manager
 brew install --cask slack
+brew install --cask signal
 brew install --cask raycast
 brew install --cask spotify
 brew install --cask stats # System metrics in taskbar
