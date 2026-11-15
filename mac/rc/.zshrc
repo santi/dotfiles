@@ -3,10 +3,6 @@
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 export HOMEBREW_PREFIX=/opt/homebrew
 
-# Add SDKMAN binaries to path
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # Add libpq to path
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # END PATH

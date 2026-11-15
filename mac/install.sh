@@ -97,17 +97,6 @@ nvm install stable
 brew install libpq
 brew install openssl
 
-# Install sdkman to handle multiple Java/Groovy/Scala versions
-brew install bash
-curl -s https://get.sdkman.io | bash
-source $HOME/.sdkman/bin/sdkman-init.sh
-
-# Install Java. For some unknown reason, SDKMAN fails silently without another command after the &&
-sdk install java && echo ""
-
-# Install Gradle. For some unknown reason, SDKMAN fails silently without another command after the &&
-sdk install gradle && echo ""
-
 # Map Caps Lock to Escape. Keycodes can be found here: https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES
 hidutil property --set "{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\": 0x700000039, \"HIDKeyboardModifierMappingDst\": 0x700000029}]}"
 
